@@ -1,0 +1,15 @@
+moduleId: test-mirror
+
+info:
+  title: Test Mirror
+  description: Test Mirror Builtin Module
+  author: Dataland Devs <devs@dataland.io>
+  sourceCodeUrl: https://github.com/dataland-io/dataland-builtin-modules/tree/main/test-mirror
+  readmePath: README.md
+  iconPath: null
+
+buildCommand: npm run build
+
+workers:
+  - workerId: test-mirror-worker
+    scriptPath: dist/testMirror.bundle.js
