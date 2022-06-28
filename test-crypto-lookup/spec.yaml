@@ -1,0 +1,32 @@
+moduleId: test-crypto-lookup
+
+info:
+  title: Test Crypto Lookup
+  description: Test Crypto Lookup Builtin Module
+  author: Dataland Devs <devs@dataland.io>
+  sourceCodeUrl: https://github.com/dataland-io/dataland-builtin-modules/tree/main/test-crypto-lookup
+  readmePath: README.md
+  iconPath: coinmarketcap-icon.png
+
+buildCommand: npm run build
+
+parameters:
+  - coinmarketcap-api-key
+
+workers:
+  - workerId: test-crypto-lookup-worker
+    scriptPath: dist/testCryptoLookup.bundle.js
+    env:
+      COINMARKETCAP_API_KEY: coinmarketcap-api-key
+
+tables:
+  - tableId: teset-crypto-lookup-table
+    tableName: crypto
+    autoMigrate: true
+    columnDescriptors:
+      - columnId: symbol-column
+        columnName: symbol
+        dataType: string
+      - columnId: price-column
+        columnName: price
+        dataType: float64
