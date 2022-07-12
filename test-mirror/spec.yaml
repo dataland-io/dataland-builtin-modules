@@ -13,3 +13,15 @@ buildCommand: npm run build
 workers:
   - workerId: test-mirror-worker
     scriptPath: dist/testMirror.bundle.js
+
+tables:
+  - tableId: mirror-table
+    tableName: mirror
+    autoMigrate: true
+    columnDescriptors:
+      - columnId: original-column
+        columnName: original
+        dataType: string
+      - columnId: duplicate-column
+        columnName: duplicate
+        dataType: string
