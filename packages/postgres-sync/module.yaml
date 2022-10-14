@@ -1,0 +1,32 @@
+moduleId: postgres-sync
+
+buildCommand: npm run build
+
+parameters:
+  - pg-host
+  - pg-port
+  - pg-database
+  - pg-user
+  - pg-password
+  - pg-schema
+  - pg-table-mapping
+  - pg-do-writeback
+
+workers:
+  - workerId: postgres-sync-worker
+    scriptPath: dist/postgres-sync.bundle.js
+    env:
+      PG_HOST: pg-host
+      PG_PORT: pg-port
+      PG_DATABASE: pg-database
+      PG_USER: pg-user
+      PG_PASSWORD: pg-password
+      PG_SCHEMA: pg-schema
+      TABLE_MAPPING: pg-table-mapping
+      DO_WRITEBACK: pg-do-writeback
+    triggers:
+      cron:
+        # every 30 seconds
+        cronExpression: "*/30 * * * * * *"
+      transaction:
+        enabled: true

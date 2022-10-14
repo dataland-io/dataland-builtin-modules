@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+build/
+dist/
+tmp/
+var/
+target/
+
+*.iml
+.idea
+
+.env

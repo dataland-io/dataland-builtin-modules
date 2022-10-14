@@ -1,0 +1,12 @@
+{
+  "name": "dataland-builtin-modules-root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "build-module": "npm run build-module -ws",
+    "lint": "npm run lint -ws"
+  }
+}

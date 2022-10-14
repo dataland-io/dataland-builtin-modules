@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "moduleBundles": [
+    "https://github.com/dataland-io/dataland-builtin-modules/raw/main/packages/mysql-sync/module.tar.gz",
+    "https://github.com/dataland-io/dataland-builtin-modules/raw/main/packages/postgres-sync/module.tar.gz"
+  ]
+}
