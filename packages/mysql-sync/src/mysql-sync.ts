@@ -1,4 +1,3 @@
-import { tableFromJSON, tableToIPC } from "@apache-arrow/es2015-esm";
 import {
   CronEvent,
   TableSyncRequest,
@@ -9,6 +8,7 @@ import {
   valueToScalar,
 } from "@dataland-io/dataland-sdk";
 import { Client } from "@dataland-workerlibs/mysql";
+import { tableFromJSON, tableToIPC } from "apache-arrow";
 import { oneLine } from "common-tags";
 import { Column, PrimaryKeyColumn, TableMapping } from "./types";
 import {

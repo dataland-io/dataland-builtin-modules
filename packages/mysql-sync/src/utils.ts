@@ -1,6 +1,6 @@
 import {
-  Scalar,
   getEnv,
+  isScalar,
   strictParseInt,
   tryGetEnv,
 } from "@dataland-io/dataland-sdk";
@@ -193,14 +193,4 @@ export const postprocessRows = (rows: Record<string, unknown>[]) => {
       }
     }
   }
-};
-
-// TODO(hzuo): Remove once this is exported from dataland-sdk (probably 0.18.0)
-export const isScalar = (unknownValue: unknown): unknownValue is Scalar => {
-  return (
-    unknownValue === null || // note the triple equals here instead of the usual `== null`
-    typeof unknownValue === "string" ||
-    typeof unknownValue === "number" ||
-    typeof unknownValue === "boolean"
-  );
 };
