@@ -1,5 +1,5 @@
 {
-  "name": "@dataland-builtin-modules/mysql-sync",
+  "name": "@dataland-builtin-modules/postgres-replicator",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -16,13 +16,9 @@
   },
   "dependencies": {
     "@dataland-io/dataland-sdk": "0.19.4",
-    "@dataland-workerlibs/mysql": "2.10.201",
-    "apache-arrow": "9.0.0",
-    "common-tags": "1.8.2",
-    "zod": "3.19.1"
+    "@dataland-workerlibs/postgres": "0.17.1"
   },
   "devDependencies": {
-    "@types/common-tags": "1.8.1",
     "@types/jest": "29.2.0",
     "@types/webpack": "5.28.0",
     "@typescript-eslint/eslint-plugin": "5.41.0",

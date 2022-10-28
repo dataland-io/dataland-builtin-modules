@@ -177,9 +177,12 @@ registerTransactionHandler(async (transaction: Transaction) => {
 
     console.log("Replicating transaction", {
       transactionId: transaction.transactionId,
+      logicalTimestamp: transaction.logicalTimestamp,
       numMutations: transaction.mutations.length,
       numWrites: writes.length,
     });
+
+    console.log("Applying writes", writes);
 
     const t3 = performance.now();
 
@@ -205,6 +208,7 @@ registerTransactionHandler(async (transaction: Transaction) => {
 
     console.log("Completed replicating transaction", {
       transactionId: transaction.transactionId,
+      logicalTimestamp: transaction.logicalTimestamp,
       numMutations: transaction.mutations.length,
       total: t4 - t0,
       connect: t1 - t0,

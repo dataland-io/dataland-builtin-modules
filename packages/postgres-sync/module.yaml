@@ -2,6 +2,14 @@ moduleId: postgres-sync
 
 buildCommand: npm run build
 
+info:
+  title: Postgres
+  description: Two-way sync a Postgres database to Dataland
+  author: Dataland Devs <devs@dataland.io>
+  sourceCodeUrl: https://github.com/dataland-io/dataland-builtin-modules
+  readmePath: README.md
+  iconPath: postgres-icon.svg
+
 parameters:
   - pg-host
   - pg-port

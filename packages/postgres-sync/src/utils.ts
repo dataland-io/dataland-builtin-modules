@@ -101,7 +101,7 @@ export const getClient = () => {
       // caCertificates: [],
     },
     connection: {
-      attempts: 1,
+      attempts: 5,
     },
   });
   return client;

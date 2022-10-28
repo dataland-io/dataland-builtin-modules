@@ -2,6 +2,14 @@ moduleId: mysql-sync
 
 buildCommand: npm run build
 
+info:
+  title: MySQL
+  description: Two-way sync a MySQL database into Dataland
+  author: Dataland Devs <devs@dataland.io>
+  sourceCodeUrl: https://github.com/dataland-io/dataland-builtin-modules
+  readmePath: README.md
+  iconPath: mysql-icon.svg
+
 parameters:
   - mysql-host
   - mysql-port

@@ -1,0 +1,27 @@
+moduleId: postgres-replicator
+
+buildCommand: npm run build
+
+parameters:
+  - pgr-host
+  - pgr-port
+  - pgr-database
+  - pgr-user
+  - pgr-password
+  - pgr-schema
+
+workers:
+  - workerId: postgres-replicator-worker
+    scriptPath: dist/postgres-replicator.bundle.js
+    env:
+      PG_HOST: pgr-host
+      PG_PORT: pgr-port
+      PG_DATABASE: pgr-database
+      PG_USER: pgr-user
+      PG_PASSWORD: pgr-password
+      PG_SCHEMA: pgr-schema
+    triggers:
+      transaction:
+        enabled: true
+        initialLogicalTimestamp: beginning
+        errorPolicy: retry
